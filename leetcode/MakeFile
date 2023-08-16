@@ -1,0 +1,5 @@
+addtwo: addtwo.o
+	gcc -o addtwo -g addtwo.o
+
+addtwo.o: addtwo.c
+	gcc -g -c -Wall addtwo.c
