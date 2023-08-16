@@ -17,13 +17,13 @@ int main() {
     struct ListNode* l1 = NULL;
     struct ListNode* l2 = NULL;
 
-    push(&l1, 3); 
-    push(&l1, 4); 
-    push(&l1, 2); 
+    push(&l1, 0); 
+    // push(&l1, 4); 
+    // push(&l1, 2); 
 
-    push(&l2, 4); 
-    push(&l2, 6); 
-    push(&l2, 5); 
+    push(&l2, 0); 
+    // push(&l2, 6); 
+    // push(&l2, 5); 
 
     struct ListNode* result = NULL;
 
@@ -80,11 +80,15 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
 
     int digit = 0;
 
-    while (total != 0) {
-        digit = total % 10;
-        total = total - digit;
-        total = total / 10;
-        append(&result, digit); 
+    if (total == 0) {
+        append(&result, 0);
+    } else {
+        while (total != 0) {
+            digit = total % 10;
+            total = total - digit;
+            total = total / 10;
+            append(&result, digit); 
+        }
     }
 
     return result;
