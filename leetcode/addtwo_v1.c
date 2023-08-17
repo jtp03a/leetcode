@@ -1,3 +1,5 @@
+//This version converts the numbers from a linked list to a int but doesnt work because the numbers get too big.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,13 +19,20 @@ int main() {
     struct ListNode* l1 = NULL;
     struct ListNode* l2 = NULL;
 
-    push(&l1, 0); 
+    push(&l1, 9); 
     // push(&l1, 4); 
     // push(&l1, 2); 
 
-    push(&l2, 0); 
-    // push(&l2, 6); 
-    // push(&l2, 5); 
+    push(&l2, 1); 
+    push(&l2, 9);
+    push(&l2, 9);
+    push(&l2, 9);
+    push(&l2, 9);
+    push(&l2, 9);
+    push(&l2, 9);
+    push(&l2, 9);
+    push(&l2, 9);
+    push(&l2, 9); 
 
     struct ListNode* result = NULL;
 
@@ -73,6 +82,9 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
         digCnt2++;
         curNode2 = curNode2->next;
     }
+
+    printf("%d\n", num1);
+    printf("%d\n", num2);
 
     int total = num1 + num2;
 
@@ -146,3 +158,9 @@ void printList(struct ListNode* head)
   printf("%d ", head->val);
   
 } 
+
+
+// l1 =
+// [9]
+// l2 =
+// [1,9,9,9,9,9,9,9,9,9]
