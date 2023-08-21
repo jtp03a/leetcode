@@ -6,3 +6,6 @@ addtwo: addtwo_v2.c
 
 longestsbstr: longestsbstr.c
 	$(CC) $(CFLAGS) longestsbstr longestsbstr.c
+
+myPow: myPow.c
+	$(CC) $(CFLAGS) myPow myPow.c
